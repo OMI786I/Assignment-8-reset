@@ -2,18 +2,24 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navLink = (
-    <div>
+    <div className="flex-row md:flex-col gap-6  ">
       <NavLink to="/">
-        <button className="btn btn-ghost">Home</button>
+        <button className="hover:border-green-500 border-transparent border-2 duration-150 hover:text-green-500 font-bold p-2 rounded-lg focus:border-green-500 focus:text-green-500">
+          Home
+        </button>
       </NavLink>
 
       <NavLink to="/listedBooks">
         {" "}
-        <button className="btn btn-ghost">Listed Books</button>
+        <button className="hover:border-green-500 border-transparent border-2 duration-150 hover:text-green-500 font-bold p-2 rounded-lg focus:border-green-500 focus:text-green-500">
+          Listed Books
+        </button>
       </NavLink>
       <NavLink to="/pagesToRead">
         {" "}
-        <button className="btn btn-ghost">Pages to read</button>
+        <button className="hover:border-green-500 border-transparent border-2 duration-150 hover:text-green-500 font-bold p-2 rounded-lg focus:border-green-500 focus:text-green-500">
+          Pages to read
+        </button>
       </NavLink>
     </div>
   );
