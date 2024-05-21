@@ -4,6 +4,8 @@ import { listedBooks } from "../utility/localStorage";
 const Details = () => {
   const data = useLoaderData();
   const { id } = useParams();
+  const idInt = parseInt(id);
+  console.log(idInt);
 
   const data2 = data.find((data) => data.bookId == id);
   console.log(data2);
@@ -53,7 +55,7 @@ const Details = () => {
         <div className="flex gap-6 mt-7">
           <button className="btn">Read</button>
           <button
-            onClick={() => listedBooks(id)}
+            onClick={() => listedBooks(idInt)}
             className="btn btn-info text-white"
           >
             Wishlist
