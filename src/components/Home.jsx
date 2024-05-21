@@ -27,7 +27,7 @@ const Home = () => {
         </div>
         <div className="mt-10">
           <h1 className=" text-center text-4xl">Books</h1>
-          <div className="grid grid-cols-3 gap-7">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
             {data.map((data2) => (
               <LoadedData key={data2.bookId} data2={data2}></LoadedData>
             ))}
