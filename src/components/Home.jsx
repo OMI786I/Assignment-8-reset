@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import LoadedData from "./LoadedData";
 
 const Home = () => {
+  const data = useLoaderData();
+  console.log(data);
   return (
     <div>
       <div>
@@ -20,6 +23,14 @@ const Home = () => {
                 </button>
               </Link>
             </div>
+          </div>
+        </div>
+        <div>
+          <h1>Books</h1>
+          <div>
+            {data.map((data2) => (
+              <LoadedData key={data2.bookId} data2={data2}></LoadedData>
+            ))}
           </div>
         </div>
       </div>
