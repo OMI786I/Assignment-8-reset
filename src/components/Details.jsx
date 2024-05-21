@@ -48,7 +48,10 @@ const Details = () => {
             <span className="text-gray-700:">Rating:</span>{" "}
             <span className="font-bold">{data2.rating}</span>
           </div>
-          <h1></h1>
+        </div>
+        <div className="flex gap-6 mt-7">
+          <button className="btn">Read</button>
+          <button className="btn btn-info text-white">Wishlist</button>
         </div>
       </div>
     </div>
