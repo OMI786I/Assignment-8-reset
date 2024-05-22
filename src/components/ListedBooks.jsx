@@ -7,6 +7,7 @@ import { GiPositionMarker } from "react-icons/gi";
 import { IoMdContacts } from "react-icons/io";
 
 import { MdOutlineContactPage } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const ListedBooks = () => {
   const [listData, setListData] = useState([]);
@@ -69,9 +70,11 @@ const ListedBooks = () => {
                 <div className=" border p-1 rounded-full px-3 bg-red-100 text-red-600">
                   Rating: {data.rating}
                 </div>
-                <button className="btn btn-success text-white">
-                  View Details
-                </button>
+                <Link to={`/data/${data.bookId}`}>
+                  <button className="btn btn-success text-white">
+                    View Details
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
