@@ -1,12 +1,13 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useOutletContext, useParams } from "react-router-dom";
 import { listedBooks } from "../utility/localStorage";
 import { ReadBooks } from "../utility/localStorage2";
 
 const Details = () => {
+  const addToRecipeList = useOutletContext();
+
   const data = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
-  console.log(idInt);
 
   const data2 = data.find((data) => data.bookId == id);
 
@@ -53,7 +54,10 @@ const Details = () => {
           </div>
         </div>
         <div className="flex gap-6 mt-7">
-          <button onClick={() => ReadBooks(idInt)} className="btn">
+          <button
+            onClick={(() => ReadBooks(idInt), () => addToRecipeList(idInt))}
+            className="btn"
+          >
             Read
           </button>
           <button
