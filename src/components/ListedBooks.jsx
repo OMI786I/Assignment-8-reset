@@ -1,9 +1,15 @@
-import { useEffect } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 import { getStoredListedBooks } from "../utility/localStorage";
 
 const ListedBooks = () => {
-  const data = useLoaderData();
+  const [listData, setListData] = useState([]);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  });
 
   useEffect(() => {
     const storedId = getStoredListedBooks();
@@ -11,11 +17,17 @@ const ListedBooks = () => {
       const listedData = data.filter((data2) =>
         storedId.includes(data2.bookId)
       );
-      console.log(listedData);
+      setListData(listedData);
     }
-  }, []);
+  });
 
-  return <div>This is listed books section</div>;
+  return (
+    <div>
+      {listData.map((data) => (
+        <div key={data.bookId}>{data.bookName}</div>
+      ))}
+    </div>
+  );
 };
 
 export default ListedBooks;

@@ -8,7 +8,6 @@ const Details = () => {
   console.log(idInt);
 
   const data2 = data.find((data) => data.bookId == id);
-  console.log(data2);
 
   return (
     <div className="flex justify-around md:flex-row flex-col gap-11 mt-10">
