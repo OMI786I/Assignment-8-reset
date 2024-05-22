@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { listedBooks } from "../utility/localStorage";
+import { ReadBooks } from "../utility/localStorage2";
 
 const Details = () => {
   const data = useLoaderData();
@@ -52,7 +53,9 @@ const Details = () => {
           </div>
         </div>
         <div className="flex gap-6 mt-7">
-          <button className="btn">Read</button>
+          <button onClick={() => ReadBooks(idInt)} className="btn">
+            Read
+          </button>
           <button
             onClick={() => listedBooks(idInt)}
             className="btn btn-info text-white"
