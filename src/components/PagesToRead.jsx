@@ -29,8 +29,8 @@ const PagesToRead = () => {
   return (
     <div>
       <BarChart
-        width={500}
-        height={300}
+        width={1200}
+        height={500}
         data={data}
         margin={{
           top: 20,
