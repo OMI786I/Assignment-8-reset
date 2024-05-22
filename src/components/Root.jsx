@@ -1,19 +1,30 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useState } from "react";
+import { getStoredReadBooks } from "../utility/localStorage2";
+import toast, { Toaster } from "react-hot-toast";
 
 const Root = () => {
-  const [recipeList, setRecipeList] = useState([]);
+  const [dataList, setDataList] = useState([]);
+  const localStorageDataRead = getStoredReadBooks();
 
-  const addToRecipeList = (recipe) => {
-    const newRecipeList = [...recipeList, recipe];
-    setRecipeList(newRecipeList);
+  const addToDataList = (data) => {
+    const isExist = dataList.find(
+      (data2) => data2 == localStorageDataRead.includes(data)
+    );
+
+    if (!isExist) {
+      setDataList([...dataList, data]);
+    } else toast.error("already added");
   };
-  console.log(recipeList);
+  console.log(dataList);
   return (
     <div>
+      <div>
+        <Toaster />
+      </div>
       <Navbar></Navbar>
-      <Outlet context={addToRecipeList}></Outlet>
+      <Outlet context={addToDataList}></Outlet>
     </div>
   );
 };

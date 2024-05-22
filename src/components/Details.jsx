@@ -3,7 +3,7 @@ import { listedBooks } from "../utility/localStorage";
 import { ReadBooks } from "../utility/localStorage2";
 
 const Details = () => {
-  const addToRecipeList = useOutletContext();
+  const addToDataList = useOutletContext();
 
   const data = useLoaderData();
   const { id } = useParams();
@@ -55,7 +55,7 @@ const Details = () => {
         </div>
         <div className="flex gap-6 mt-7">
           <button
-            onClick={(() => ReadBooks(idInt), () => addToRecipeList(idInt))}
+            onClick={(() => ReadBooks(idInt), () => addToDataList(idInt))}
             className="btn"
           >
             Read
