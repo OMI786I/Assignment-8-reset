@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import PagesToRead from "./components/PagesToRead";
 import ListedBooks from "./components/ListedBooks";
 import Details from "./components/Details";
+import DataShow from "./components/DataShow";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/listedBooks",
         element: <ListedBooks></ListedBooks>,
+      },
+      {
+        path: "/dataShow",
+        element: <DataShow></DataShow>,
       },
     ],
   },

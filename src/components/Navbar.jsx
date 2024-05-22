@@ -9,7 +9,7 @@ const Navbar = () => {
         </button>
       </NavLink>
 
-      <NavLink to="/listedBooks">
+      <NavLink to="/dataShow">
         {" "}
         <button className="hover:border-green-500 border-transparent border-2 duration-150 hover:text-green-500 font-bold p-2 rounded-lg focus:border-green-500 focus:text-green-500">
           Listed Books
