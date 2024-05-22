@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@coreui/coreui": "^5.0.1",
+    "@coreui/react": "^5.0.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropdown": "^1.11.0",
+    "react-dropdown-select": "^4.11.2",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
     "react-tabs": "^6.0.2",
