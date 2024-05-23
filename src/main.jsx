@@ -11,6 +11,7 @@ import ListedBooks from "./components/ListedBooks";
 import Details from "./components/Details";
 import DataShow from "./components/DataShow";
 import Error from "./Erropage/Error";
+import AboutUs from "./components/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/dataShow",
         element: <DataShow></DataShow>,
+      },
+      {
+        path: "/about",
+        element: <AboutUs></AboutUs>,
       },
     ],
   },

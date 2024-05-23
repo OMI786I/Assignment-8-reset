@@ -14,7 +14,7 @@ const Home = () => {
             <h1 className="text-5xl font-bold">
               Books to freshen up your bookshelf
             </h1>
-            <Link to="listedBooks">
+            <Link to="DataShow">
               <button className="btn btn-success text-white mt-16">
                 View The List
               </button>

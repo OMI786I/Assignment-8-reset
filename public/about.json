@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "job_position": "Software Engineer",
+    "hobby_text": "John loves hiking and spends most weekends exploring new trails.",
+    "email": "john.doe@example.com",
+    "image_url": "https://example.com/images/john_doe.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "job_position": "Graphic Designer",
+    "hobby_text": "Jane is passionate about painting and often participates in local art exhibitions.",
+    "email": "jane.smith@example.com",
+    "image_url": "https://example.com/images/jane_smith.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "job_position": "Data Analyst",
+    "hobby_text": "Michael enjoys playing chess and competes in regional chess tournaments.",
+    "email": "michael.johnson@example.com",
+    "image_url": "https://example.com/images/michael_johnson.jpg"
+  }
+]
