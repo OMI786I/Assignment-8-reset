@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 const getStoredReadBooks = () => {
   const storedReadBooks = localStorage.getItem("read-books");
   if (storedReadBooks) {
@@ -12,7 +14,8 @@ const ReadBooks = (id) => {
   if (!exists) {
     storedReadBooks.push(id);
     localStorage.setItem("read-books", JSON.stringify(storedReadBooks));
-  }
+    toast.success("successfully added");
+  } else toast.error("already exist");
 };
 
 export { getStoredReadBooks, ReadBooks };

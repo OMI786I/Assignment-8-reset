@@ -1,6 +1,7 @@
 import { useLoaderData, useOutletContext, useParams } from "react-router-dom";
 import { listedBooks } from "../utility/localStorage";
 import { ReadBooks } from "../utility/localStorage2";
+import { Toaster } from "react-hot-toast";
 
 const Details = () => {
   const addToDataList = useOutletContext();
@@ -13,6 +14,7 @@ const Details = () => {
 
   return (
     <div className="flex justify-around md:flex-row flex-col gap-11 mt-10">
+      <Toaster></Toaster>
       <div>
         <img
           src={data2.image}
@@ -54,10 +56,7 @@ const Details = () => {
           </div>
         </div>
         <div className="flex gap-6 mt-7">
-          <button
-            onClick={(() => ReadBooks(idInt), () => addToDataList(idInt))}
-            className="btn"
-          >
+          <button onClick={() => ReadBooks(idInt)} className="btn">
             Read
           </button>
           <button
