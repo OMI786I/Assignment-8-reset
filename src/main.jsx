@@ -12,6 +12,7 @@ import Details from "./components/Details";
 import DataShow from "./components/DataShow";
 import Error from "./Erropage/Error";
 import AboutUs from "./components/AboutUs";
+import Award from "./components/Award";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/award",
+        element: <Award></Award>,
       },
     ],
   },

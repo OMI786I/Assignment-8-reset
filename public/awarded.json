@@ -1,0 +1,15 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/CvZq6vg/the-Great-Gatsby.jpg",
+    "review": "The Great Gatsby is a classic novel that delves into the opulence and excess of the Jazz Age in 1920s America. Through the eyes of Nick Carraway, we are introduced to the mysterious and wealthy Jay Gatsby, whose unrequited love for Daisy Buchanan drives much of the plot. Fitzgerald's lyrical prose and vivid descriptions paint a portrait of a bygone era while exploring timeless themes of ambition, love, and the American Dream. The novel's tragic ending serves as a poignant commentary on the corrupting influence of wealth and the elusiveness of happiness.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Classic",
+    "tags": ["Classic", "American Literature"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  }
+]

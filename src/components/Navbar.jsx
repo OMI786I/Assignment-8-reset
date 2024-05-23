@@ -27,6 +27,12 @@ const Navbar = () => {
           About Us
         </button>
       </NavLink>
+      <NavLink to="/award">
+        {" "}
+        <button className="hover:border-green-500 border-transparent border-2 duration-150 hover:text-green-500 font-bold p-2 rounded-lg focus:border-green-500 focus:text-green-500">
+          Award
+        </button>
+      </NavLink>
     </div>
   );
 
