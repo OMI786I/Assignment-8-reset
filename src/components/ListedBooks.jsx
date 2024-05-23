@@ -32,14 +32,14 @@ const ListedBooks = () => {
     <div>
       {listData.map((data) => (
         <div key={data.bookId}>
-          <div className="card md:card-side bg-base-100 h-72 shadow-xl">
+          <div className="card md:card-side bg-base-100 md:h-72 shadow-xl">
             <figure>
               <img src={data.image} alt="Movie" className="p-8  w-56 lg:w-64" />
             </figure>
             <div className="card-body">
               <h2 className="card-title md:text-3xl">{data.bookName}</h2>
               <p className="text-gray-700">By: {data.author}</p>
-              <div className="flex gap-2 mt-3">
+              <div className="md:flex gap-2 mt-3">
                 <span className="font-bold">Tag:</span>
                 {data.tags.map((tag) => (
                   <div className=" border p-1 rounded-full px-3 bg-green-100 text-green-600">

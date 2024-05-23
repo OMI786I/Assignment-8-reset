@@ -14,9 +14,7 @@ const DataShow = () => {
       <div className=" flex flex-row justify-center w-full  my-8">
         {" "}
         <details className="dropdown">
-          <summary className="m-1 btn btn-success text-white">
-            open or close
-          </summary>
+          <summary className="m-1 btn btn-success text-white">Sort</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
             <li>
               <a>Item 1</a>
