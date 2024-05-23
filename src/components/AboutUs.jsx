@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 const AboutUs = () => {
   const [person, setPerson] = useState([]);
   useEffect(() => {
-    fetch("about.json")
+    fetch("/about.json")
       .then((res) => res.json())
       .then((data) => setPerson(data));
-  });
+  }, []);
 
   return (
     <div>

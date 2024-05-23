@@ -4,10 +4,10 @@ import { FaRegStar } from "react-icons/fa";
 const Award = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("awarded.json")
+    fetch("/awarded.json")
       .then((res) => res.json())
       .then((data) => setData(data));
-  });
+  }, []);
 
   return (
     <div>

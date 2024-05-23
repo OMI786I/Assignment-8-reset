@@ -12,10 +12,10 @@ const ReadBooks = () => {
   const [ReadData, setReadData] = useState([]);
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setData(data));
-  });
+  }, []);
 
   useEffect(() => {
     const storedId = getStoredReadBooks();
@@ -25,7 +25,7 @@ const ReadBooks = () => {
       );
       setReadData(listedData);
     }
-  });
+  }, [data]);
 
   return (
     <div>

@@ -13,10 +13,10 @@ const ListedBooks = () => {
   const [listData, setListData] = useState([]);
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setData(data));
-  });
+  }, []);
 
   useEffect(() => {
     const storedId = getStoredListedBooks();
@@ -26,7 +26,7 @@ const ListedBooks = () => {
       );
       setListData(listedData);
     }
-  });
+  }, [data]);
 
   return (
     <div>

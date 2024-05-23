@@ -5,10 +5,10 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 const PagesToRead = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setData(data));
-  });
+  }, []);
   const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${
